@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Artisan Alley</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts: Gowun Batang -->
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+      html { scroll-behavior: smooth; }
+    </style>
+    <!-- Firebase config and initialization -->
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyCVPVmHISxZ6tDLtymsUlGDr7WPp5RBd-Q",
+        authDomain: "artisan-alley-web.firebaseapp.com",
+        projectId: "artisan-alley-web",
+        storageBucket: "artisan-alley-web.appspot.com",
+        messagingSenderId: "872372286147",
+        appId: "1:872372286147:web:afcdc10f7a4a885d376876",
+        measurementId: "G-MEPJB2XJ42"
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+      <div class="navbar">
+        <button class="hamburger" aria-label="Open navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-left">
+          <nav>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="artisans.html">Artisans</a>
+          </nav>
+        </div>
+        <div class="nav-center">
+          <a href="/" class="logo">artisan alley</a>
+        </div>
+        <div class="nav-right">
+          <button class="nav-action login">Login / Sign up</button>
+          <button class="nav-search" aria-label="Search">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Handcrafted Treasure</h1>
+            <p class="subtitle">New Arrivals</p>
+        </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="products-section">
+        <h2 class="section-title">Top Sellers</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/140x180?text=Vase" alt="Vase">
+                <h3>Vase</h3>
+                <p class="price">$42</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/140x180?text=Vase" alt="Vase">
+                <h3>Vase</h3>
+                <p class="price">$42</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/140x180?text=Vase" alt="Vase">
+                <h3>Vase</h3>
+                <p class="price">$42</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/140x180?text=Vase" alt="Vase">
+                <h3>Vase</h3>
+                <p class="price">$42</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2 class="section-title">Testimonials</h2>
+        <div class="testimonial-list">
+            <div class="testimonial-card">
+                <p class="testimonial-text">
+                    "Absolutely Stunning Craftsmanship!<br>
+                    I purchased a handmade ceramic vase from Artisan Alley, and it has become the centerpiece of my living room. Highly recommend for anyone seeking authentic, handmade decor!"
+                </p>
+                <p class="testimonial-author">— Emily R., Happy Customer</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">
+                    "The attention to detail is incredible. I love supporting local artists and Artisan Alley makes it so easy!"
+                </p>
+                <p class="testimonial-author">— Alex P., Satisfied Shopper</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">
+                    "Fast shipping and beautiful packaging. The mug I ordered is my new favorite!"
+                </p>
+                <p class="testimonial-author">— Jamie L., Returning Customer</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="artisans.html">Artisans</a>
+            <a href="#">Support</a>
+            <a href="#">FAQs</a>
+            <a href="#">Shipping & Returns</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+        <div class="footer-social">
+            <span>Stay Connected</span>
+            <a href="https://twitter.com/" target="_blank" class="social-icon" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com/" target="_blank" class="social-icon" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://facebook.com/" target="_blank" class="social-icon" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+        <div class="footer-bottom">
+            <span>Craft . Create . Connect</span><br>
+            <span>&copy; 2025 Artisan Alley. All Rights Reserved.</span>
+        </div>
+    </footer>
+
+    <!-- Authentication Modal -->
+    <div id="authModal" class="modal" style="display:none;">
+      <div class="modal-content">
+        <span class="close-modal" id="closeAuthModal">&times;</span>
+        <h2>Login or Sign Up</h2>
+        <form id="authForm">
+          <label for="auth-email">Email</label>
+          <input type="email" id="auth-email" required>
+          <label for="auth-password">Password</label>
+          <input type="password" id="auth-password" required>
+          <button type="submit">Login</button>
+          <button type="button" id="signupBtn">Sign Up</button>
+          <div id="authMessage"></div>
+        </form>
+      </div>
+    </div>
+    <div class="user-info" id="userInfo" style="display:none;">
+      <p id="userEmail"></p>
+      <button id="logoutBtn" class="nav-action login" style="background:#a05c26;">Logout</button>
+    </div>
+
+    <!-- Main JS (handles menu, cart, contact, Firebase auth, etc.) -->
+    <script src="main.js"></script>
+</body>
+</html>
