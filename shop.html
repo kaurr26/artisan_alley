@@ -18,11 +18,19 @@
         </button>
         <div class="nav-left">
           <nav>
-            <a href="shop.html">Shop</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="artisans.html">Artisans</a>
-          </nav>
+  <div class="dropdown">
+    <a href="shop.html" class="dropbtn">Shop</a>
+    <div class="dropdown-content">
+      <a href="#">Kitchen</a>
+      <a href="#">Home Decor</a>
+      <a href="#">Jewellery</a>
+      <a href="#">Others</a>
+    </div>
+  </div>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="artisans.html">Artisans</a>
+</nav>
         </div>
         <div class="nav-center">
           <a href="index.html" class="logo">artisan alley</a>
@@ -35,14 +43,147 @@
         </div>
       </div>
     </header>
-
     <main>
       <section class="page-section">
         <h1>Shop</h1>
         <p>
           Welcome to our shop! Browse our handcrafted products below.
         </p>
-        <!-- You can add your product grid or shop content here -->
+<section class="products-section">
+  <div class="product-grid">
+    <div class="product-card">
+      <div class="product-image-overlay">
+        <img src="images/vase1.jpg" alt="Vase">
+        <div class="product-label">Vase
+          <span class="price">$29.99</span>
+          <button class="add-to-cart-btn" data-product="Vase" data-price="29.99">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image-overlay">
+        <img src="images/mug1.jpg" alt="Artisan Mug">
+        <div class="product-label">Artisan Mug
+          <span class="price">$19.99</span>
+          <button class="add-to-cart-btn" data-product="Artisan Mug" data-price="19.99">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image-overlay">
+        <img src="images/Soap.jpg" alt="Organic Soap">
+        <div class="product-label">Organic Soap
+          <span class="price">$9.99</span>
+          <button class="add-to-cart-btn" data-product="Organic Soap" data-price="9.99">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image-overlay">
+        <img src="images/Handmade Plate.jpg" alt="Handmade Plate">
+        <div class="product-label">Handmade Plate
+          <span class="price">$24.99</span>
+          <button class="add-to-cart-btn" data-product="Handmade Plate" data-price="24.99">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image-overlay">
+        <img src="images/hero3.jpg" alt="Arcana Comb">
+        <div class="product-label">Arcana Comb
+          <span class="price">$14.99</span>
+          <button class="add-to-cart-btn" data-product="Arcana Comb" data-price="14.99">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image-overlay">
+        <img src="images/cermaic bowl.jpg" alt="Ceramic Bowl">
+        <div class="product-label">Ceramic Bowl
+          <span class="price">$34.99</span>
+          <button class="add-to-cart-btn" data-product="Ceramic Bowl" data-price="34.99">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image-overlay">
+        <img src="images/silver necklace.jpg" alt="Silver Necklace">
+        <div class="product-label">Silver Necklace
+          <span class="price">$49.99</span>
+          <button class="add-to-cart-btn" data-product="Silver Necklace" data-price="49.99">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image-overlay">
+        <img src="images/Candles.jpg" alt="Soy Candle">
+        <div class="product-label">Soy Candle
+          <span class="price">$15.99</span>
+          <button class="add-to-cart-btn" data-product="Soy Candle" data-price="15.99">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image-overlay">
+        <img src="images/blanket.jpg" alt="Woven Blanket">
+        <div class="product-label">Woven Blanket
+          <span class="price">$59.99</span>
+          <button class="add-to-cart-btn" data-product="Woven Blanket" data-price="59.99">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image-overlay">
+        <img src="images/tray.jpg" alt="Serving Tray">
+        <div class="product-label">Serving Tray
+          <span class="price">$39.99</span>
+          <button class="add-to-cart-btn" data-product="Serving Tray" data-price="39.99">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image-overlay">
+        <img src="images/teapot.jpg" alt="Ceramic Teapot">
+        <div class="product-label">Ceramic Teapot
+          <span class="price">$44.99</span>
+          <button class="add-to-cart-btn" data-product="Ceramic Teapot" data-price="44.99">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image-overlay">
+        <img src="images/planter.jpg" alt="Handmade Planter">
+        <div class="product-label">Handmade Planter
+          <span class="price">$22.99</span>
+          <button class="add-to-cart-btn" data-product="Handmade Planter" data-price="22.99">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+        <section class="product-details">
+          <h2>Product Details</h2>
+          <p>
+            Click on any product to view more details and make a purchase.
+          </p>
+        </section>
+
+        <section class="cart">
+          <h2>Your Cart</h2>
+          <p>
+            Your cart is currently empty. Add products to your cart to proceed with checkout.
+          </p>
+        </section>
+
+        <section class="checkout">
+          <h2>Checkout</h2>
+          <p>
+            Ready to complete your purchase? Click the button below to proceed to checkout.
+          </p>
+          <button class="checkout-button">Proceed to Checkout</button>
+        </section>  
+</section>
+
       </section>
     </main>
 
