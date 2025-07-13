@@ -6,29 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Fonts: Gowun Batang -->
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Firebase SDKs -->
-    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
     <!-- Font Awesome (for icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
-    <style>
-      html { scroll-behavior: smooth; }
-    </style>
-    <!-- Firebase config and initialization -->
-    <script>
-      const firebaseConfig = {
-        apiKey: "AIzaSyCVPVmHISxZ6tDLtymsUlGDr7WPp5RBd-Q",
-        authDomain: "artisan-alley-web.firebaseapp.com",
-        projectId: "artisan-alley-web",
-        storageBucket: "artisan-alley-web.appspot.com",
-        messagingSenderId: "872372286147",
-        appId: "1:872372286147:web:afcdc10f7a4a885d376876",
-        measurementId: "G-MEPJB2XJ42"
-      };
-      firebase.initializeApp(firebaseConfig);
-    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -41,7 +22,15 @@
         </button>
         <div class="nav-left">
           <nav>
-            <a href="shop.html">Shop</a>
+            <div class="dropdown">
+              <a href="shop.html" class="dropbtn">Shop</a>
+              <div class="dropdown-content">
+                <a href="#">Kitchen</a>
+                <a href="#">Home Decor</a>
+                <a href="#">Jewellery</a>
+                <a href="#">Others</a>
+              </div>
+            </div>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
             <a href="artisans.html">Artisans</a>
@@ -51,6 +40,12 @@
           <a href="/" class="logo">artisan alley</a>
         </div>
         <div class="nav-right">
+          <div id="cartSummary" class="cart-summary">
+            🛒 Cart (<span id="cartCount">0</span>)
+            <div id="cartDropdown" class="cart-dropdown" style="display:none;">
+              <ul id="cartItemsList"></ul>
+            </div>
+          </div>
           <button class="nav-action login">Login / Sign up</button>
           <button class="nav-search" aria-label="Search">
             <i class="fas fa-search"></i>
@@ -59,44 +54,71 @@
       </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Handcrafted Treasure</h1>
-            <p class="subtitle">New Arrivals</p>
-        </div>
-    </section>
+    <!-- Hero Slideshow Section -->
+<section class="hero">
+  <div class="hero-slideshow">
+    <div class="slide active">
+      <img src="images/Hero1 (2).jpg" alt="Handcrafted Treasure">
+      <div class="hero-content">
+        <h1>Handcrafted Treasure</h1>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="images/hero2.jpg" alt="Unique Artisan Mugs">
+      <div class="hero-content">
+        <h1>Unique Artisan Mugs</h1>
+        <p class="subtitle">Warm Up Your Day</p>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="images/hero3.jpg" alt="Arcana Comb">
+      <div class="hero-content">
+        <h1>Arcana Comb</h1>
+        <p class="subtitle">Style Rooted in Tradition</p>
+      </div>
+    </div>
+    <button class="slide-btn prev">&#10094;</button>
+    <button class="slide-btn next">&#10095;</button>
+    <div class="slide-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+</section>
+
 
     <!-- Product Grid -->
-    <section class="products-section">
-        <h2 class="section-title">Top Sellers</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="https://via.placeholder.com/140x180?text=Vase" alt="Vase">
-                <h3>Vase</h3>
-                <p class="price">$42</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/140x180?text=Vase" alt="Vase">
-                <h3>Vase</h3>
-                <p class="price">$42</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/140x180?text=Vase" alt="Vase">
-                <h3>Vase</h3>
-                <p class="price">$42</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/140x180?text=Vase" alt="Vase">
-                <h3>Vase</h3>
-                <p class="price">$42</p>
-                <button>Add to Cart</button>
+<section class="products-section">
+    <h2 class="section-title">Top Sellers</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <div class="product-image-overlay">
+                <img src="images/Vase1.jpg" alt="Vase">
+                <div class="product-label">Vase</div>
             </div>
         </div>
-    </section>
+        <div class="product-card">
+            <div class="product-image-overlay">
+                <img src="images/mug1.jpg" alt="Artisan Mug">
+                <div class="product-label">Artisan Mug</div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image-overlay">
+                <img src="images/bracelet.jpg" alt="Bracelet">
+                <div class="product-label">Bracelet</div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image-overlay">
+                <img src="images/Soap.jpg" alt="Organic Soap">
+                <div class="product-label">Organic S</div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <!-- Testimonials -->
     <section class="testimonials">
@@ -176,7 +198,7 @@
       <button id="logoutBtn" class="nav-action login" style="background:#a05c26;">Logout</button>
     </div>
 
-    <!-- Main JS (handles menu, cart, contact, Firebase auth, etc.) -->
+    <!-- Main JS -->
     <script src="main.js"></script>
 </body>
 </html>
